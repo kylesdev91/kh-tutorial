@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { uuid as v4 } from "uuid"
+import { v4 as uuid } from "uuid"
 
 export const useUserStore = defineStore('users', {
     state: () => {
@@ -15,7 +15,7 @@ export const useUserStore = defineStore('users', {
         });
       },
       delete(id) {
-        this.users = this.users.filter((user) => user.id !== id)
+        this.users = this.users.filter((user) => user.id !== id);
       }
     },
     getters: {
